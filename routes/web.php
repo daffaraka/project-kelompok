@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PenitipanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::prefix('auth')->group(function () {
     Route::get('/login',[UserController::class, 'getLogin']);
 });
 Route::resource('/barang', BarangController::class);
+
+Route::get('/penitipan',[PenitipanController::class,'index'])->name('penitipan');
